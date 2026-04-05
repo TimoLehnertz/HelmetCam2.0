@@ -58,7 +58,7 @@ void loop() {
   }
   digitalWrite(PIN_O3, vtxEnable);
 
-  float bat = analogRead(PIN_BAT_ADC) * (3.3 / 4095.0) * 3.2 * 1.0670103;
+  float bat = analogRead(PIN_BAT_ADC) * (3.3 / 4095.0) * 3.2 * 1.0670103 + 2.123;
   float remainingPercent;
   if (bat >= 9.0) {
       remainingPercent = 100;
